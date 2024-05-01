@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .column {
+            flex: 33.33%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .list {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            color: #fff;
+        }
+        .list a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 5px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 bg-dark" style="position: fixed; height: 100%;">
+                <div class="py-1 mt-5" style="color: white;"><i class="fa-solid fa-plane me-3"></i>
+                    <a href="/hotelbooking" style="color: white; text-decoration: none;">Hotel Booking</a>
+                </div>
+                <hr class="text-secondary">
+                <div class="py-1" style="color: white;"><i class="fa-regular fa-eye me-3"></i>
+                    <a href="/cancelbooking" style="color: white; text-decoration: none;">Cancel Booking</a>
+                </div>
+                <hr class="text-secondary">
+                <div class="py-1" style="color: white;"><i class="fa-regular fa-eye me-3"></i>
+                    <a href="/viewbooking" style="color: white; text-decoration: none;"> View Booking</a>
+                </div>
+                <hr class="text-secondary">
+                <div class="py-1" style="color: white;"><i class="fa-regular fa-registered me-3"></i>
+                    <a href="/registration" style="color: white; text-decoration: none;">Registration</a>
+                </div>
+                <hr class="text-secondary">
+                <div class="py-1" style="color: white;"><i class="fa-solid fa-phone me-3"></i>
+                    <a href="/viewcontact" style="color: white; text-decoration: none;">View Contact</a>
+                </div>
+                <hr class="text-secondary">
+            </div>
+            <div class="col-10"></div>
+        </div>
+    </div>
+</body>
+</html>

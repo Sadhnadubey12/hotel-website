@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,tr,th,td{
+        border: 1px solid black;
+    }
+
+    .text-center{
+        color: black;
+        font: sans-serif;
+    }
+
+
+</style>
+<body>  
+    <%- include('./header.ejs') %>
+    <%- include('./left.ejs') %>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-10">
+                <h1 class="text-center">View Register People</h1>
+                <% if(regdata.length>0){ %>
+                <table class="table table-bordered table-sm">
+                    <thead>
+                    <tr>
+                        <th>Fullname</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Confirm password</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i=0; i<regdata.length; i++){%>
+                    <tr>
+                        <td><%= regdata[i].fullname %></td>
+                        <td><%= regdata[i].email %></td>
+                        <td><%= regdata[i].password %></td>
+                        <td><%= regdata[i].confirmPassword %></td>
+                        <td><a href="/edit/<%= regdata[i]._id %>"><button type="button" class="btn btn-outline-primary">Edit</button></a></td>
+                        <td><a href="/delete_3/<%= regdata[i]._id %>"><button type="button" class="btn btn-outline-primary">Delete</button></a></td>
+                    </tr>
+                    <% } %>
+                    </tbody>
+                    
+                </table>
+                <% } else {%>
+                    no record found
+
+                    <%} %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

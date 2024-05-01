@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,tr,th,td{
+        border: 1px solid black;
+    }
+
+    .text-center{
+        color: black;
+        font: sans-serif;
+    }
+
+
+</style>
+<body>  
+    <%- include('./header.ejs') %>
+    <%- include('./left.ejs') %>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-10">
+                <h1 class="text-center">View booking</h1>
+                <% if(regdata.length>0){ %>
+                <table class="table table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            <th>Upload picture</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i=0; i<regdata.length; i++){ %>
+                            <tr>
+                                <td><%= regdata[i].name %></td>
+                                <td><%= regdata[i].price %></td>
+                                <td><%= regdata[i].description %></td>
+                                <!-- <td><%= regdata[i].checkoutdate %></td> -->
+                                <!-- <td><%= regdata[i].numguests %></td> -->
+
+                            <!-- <td> <%=regdata[i].image%> </td> -->
+                    <td> <img src="/<%=regdata[i].image%>" alt="" width="180px" height="150px"></td>
+                        <td><a href="/edit2/<%= regdata[i]._id %>"><button type="button" class="btn btn-outline-primary">Edit</button></a></td>
+                        <td><a href="/delete_1/<%= regdata[i]._id %>"><button type="button" class="btn btn-outline-primary">Delete</button></a></td>
+                              </td>
+                            </tr>
+                            
+                    <% } %>
+                    </tbody>
+                    
+                    
+                </table>
+                <% } else {%>
+                    no record found
+
+                    <%} %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

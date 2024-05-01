@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    
+    <style>
+       
+        img {
+            width: 30%; 
+            height: 400px;
+            float: left; 
+            margin: 25px;
+            padding-left: 30px;
+        }
+        
+        .hotel-info {
+            padding-top: 20px;
+ 
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0; /* Remove default margin */
+        }
+        
+        .feature-list li {
+            display: inline-block; /* Display list items horizontally */
+            margin-right: 30px; /* Add some spacing between list items */
+        }
+        
+        .feature-list li i {
+            margin-right: 10px; /* Adjust icon margin */
+        }
+    </style>
+</head>
+<body>
+        <div class="row">
+            <div class="md-col-6">
+                <img src="/<%=regdata.image%>" alt="">
+            </div>
+            <div class="md-col-6 hotel-info">
+               <h1><%=regdata.name %></h1> 
+               <p><%= regdata.description %></p>
+               <h3>Price per Night: <strong>₹<%= regdata.price %></strong></h3>
+                <p>Our services:</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-coffee"></i> Complimentary breakfast</li>
+                    <li><i class="fas fa-wifi"></i> Free Wi-Fi</li>
+                    <li><i class="fas fa-bath"></i> En-suite bathroom</li>
+                    <li><i class="fas fa-tv"></i> Flat-screen TV</li>
+                    <li><i class="fas fa-car"></i> Free parking</li>
+                    <li><i class="fas fa-concierge-bell"></i> 24/7 room service</li>
+                    <li><i class="fas fa-swimming-pool"></i> Access to swimming pool</li>
+                    <li><i class="fas fa-utensils"></i> On-site restaurant</li>
+                </ul> 
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
